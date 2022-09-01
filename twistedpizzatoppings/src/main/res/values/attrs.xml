@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TwistedPizzaToppingsView">
+        <attr name="pizzaImage" format="reference"/>
+        <attr name="pizzaSize">
+            <enum name="small" value="60" />
+            <enum name="medium" value="80" />
+            <enum name="large" value="100" />
+        </attr>
+        <attr name="toppingViewSize" format="dimension" />
+        <attr name="toppingQuantity" format="integer" />
+        <attr name="animationDuration" format="integer" />
+        <attr name="plateImage" format="reference" />
+        <attr name="pizzaAnimation" format="boolean" />
+    </declare-styleable>
+</resources>

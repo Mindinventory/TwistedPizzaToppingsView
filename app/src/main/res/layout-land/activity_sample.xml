@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.mindinventory.twistedpizzatoppings.TwistedPizzaToppingsView
+        android:id="@+id/twistedPizzaToppingsView"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_180sdp"
+        app:animationDuration="800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibNext"
+        app:layout_constraintStart_toEndOf="@+id/ibPrevious"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pizzaAnimation="true"
+        app:pizzaImage="@drawable/pizza5"
+        app:pizzaSize="large"
+        app:plateImage="@drawable/plate"
+        app:toppingQuantity="12"
+        app:toppingViewSize="@dimen/_15sdp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@null"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toTopOf="@id/tvPizza"
+        app:layout_constraintEnd_toStartOf="@id/rgSize"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:background="@null"
+        android:src="@drawable/ic_left"
+        app:layout_constraintBottom_toTopOf="@id/tvPizza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <RadioGroup
+        android:id="@+id/rgSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rvToppings"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:fontFamily="@font/lobster_regular"
+            android:text="@string/size_small"
+            android:textColor="@color/color_tan"
+            android:textSize="@dimen/_14ssp" />
+
+        <RadioButton
+            android:id="@+id/rbMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:button="@null"
+            android:fontFamily="@font/lobster_regular"
+            android:text="@string/size_medium"
+            android:textColor="@color/color_tan"
+            android:textSize="@dimen/_14ssp" />
+
+        <RadioButton
+            android:id="@+id/rbLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:fontFamily="@font/lobster_regular"
+            android:text="@string/size_large"
+            android:textColor="@color/color_tan"
+            android:textSize="@dimen/_14ssp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:fontFamily="@font/lobster_regular"
+        android:textColor="@color/color_tan"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvPizzaPrice"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/ibPrevious"
+        tools:text="Margerita" />
+
+    <TextView
+        android:id="@+id/tvPizzaPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/lobster_regular"
+        android:textColor="@color/color_tan"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@id/tvPizza"
+        app:layout_constraintEnd_toEndOf="@id/ibNext"
+        app:layout_constraintStart_toEndOf="@id/tvPizza"
+        app:layout_constraintTop_toTopOf="@id/tvPizza"
+        tools:text="$15" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvToppings"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/row_topping" />
+</androidx.constraintlayout.widget.ConstraintLayout>

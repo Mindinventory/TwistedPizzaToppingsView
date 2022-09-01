@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TwistedPizzaToppings</string>
+    <string name="pepperoni">Pepperoni</string>
+    <string name="onions">Onions</string>
+    <string name="sausage">Sausage</string>
+    <string name="black_olives">Black olives</string>
+    <string name="green_chillis">Green Chillis</string>
+    <string name="mushrooms">Mushrooms</string>
+    <string name="Rs">\u20B9</string>
+    <string name="size_small">Small</string>
+    <string name="size_medium">Medium</string>
+    <string name="size_large">Large</string>
+
+
+    <string name="pizza1_name">Farm Villa</string>
+    <string name="pizza2_name">Tandoori Chicken</string>
+    <string name="pizza3_name">Burn To Hell</string>
+    <string name="pizza4_name">Panir Tikka</string>
+    <string name="pizza5_name">Tomato Olive</string>
+    <string name="pizza6_name">Tomato Mushroom</string>
+    <string name="pizza7_name">Ala Mexican</string>
+
+</resources>

@@ -1,9 +1,11 @@
 <a href="https://www.mindinventory.com/?utm_source=gthb&utm_medium=repo&utm_campaign=twistedPizzaToppings"><img src="https://github.com/Sammindinventory/MindInventory/blob/main/Banner.png"></a>
 
-# TwistedPizzaToppingsView
-[![](https://jitpack.io/v/Mindinventory/TwistedPizzaToppingsView.svg)](https://jitpack.io/#Mindinventory/TwistedPizzaToppingsView)
+# TwistedPizzaToppingsView  [![](https://jitpack.io/v/Mindinventory/TwistedPizzaToppingsView.svg)](https://jitpack.io/#Mindinventory/TwistedPizzaToppingsView) ![](https://img.shields.io/github/languages/top/Mindinventory/TwistedPizzaToppingsView) ![](https://img.shields.io/github/license/mindinventory/TwistedPizzaToppingsView)
 
 ## Overview
+Simple view which allows options to customize your pizza toppings and size as per your choice.
+
+
 ![ezgif com-gif-maker (10)](/media/feature.gif)
 
 ## Features

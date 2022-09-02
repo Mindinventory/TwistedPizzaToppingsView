@@ -61,6 +61,7 @@ dependencies {
         app:pizzaAnimation="true"
         app:pizzaImage="@drawable/pizza5"
         app:pizzaSize="large"
+        app:pizzaImageMargin="@dimen/_20sdp"
         app:plateImage="@drawable/plate"
         app:toppingQuantity="12"
         app:toppingViewSize="@dimen/_15sdp" />
@@ -97,10 +98,11 @@ fun setAnimationDuration(@IntRange(from = 1, to = 1000) value: Long)
 | **pizzaAnimation**           | boolean                    | Enable pizza & plate view animation                | true         |
 | **pizzaSize**                | enum SMALL, MEDIUM & LARGE | Set pizza view size                                | LARGE        |
 | **pizzaImage**               | int or Uri                 | Set pizza image                                    | ic_pizza.png |
+| **pizzaImageMargin**         | int                        | Set pizza image margin                             | _20dp        |
 | **plateImage**               | int or Uri                 | Set pizza plate image                              | plate.png    |
 | **toppingQuantity**          | int                        | Customize adding topping quantity (maximum 12)     | 12           |
 | **toppingViewSize**          | int                        | Customize topping view size                        | _15dp        |
-| **pizzaImageMargin**         | int                        | Set pizza image margin                             | _20dp        |
+
 
 
 ## Guideline for contributors

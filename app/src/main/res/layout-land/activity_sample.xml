@@ -25,6 +25,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:pizzaAnimation="true"
         app:pizzaImage="@drawable/pizza5"
+        app:pizzaImageMargin="@dimen/_20sdp"
         app:pizzaSize="large"
         app:plateImage="@drawable/plate"
         app:toppingQuantity="12"

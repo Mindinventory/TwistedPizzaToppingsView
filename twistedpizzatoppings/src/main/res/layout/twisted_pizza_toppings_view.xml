@@ -28,7 +28,6 @@
             android:id="@+id/ivPizza"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="25dp"
             android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="@id/ivWoodenPlate"
             app:layout_constraintEnd_toEndOf="@id/ivWoodenPlate"

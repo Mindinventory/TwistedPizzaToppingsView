@@ -12,5 +12,6 @@
         <attr name="animationDuration" format="integer" />
         <attr name="plateImage" format="reference" />
         <attr name="pizzaAnimation" format="boolean" />
+        <attr name="pizzaImageMargin" format="dimension" />
     </declare-styleable>
 </resources>

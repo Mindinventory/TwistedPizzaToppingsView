@@ -39,6 +39,7 @@ class TwistedPizzaToppingsView(context: Context, attrs: AttributeSet) :
     private var pizzaImage: Int = 0
     private var pizzaImageUri: String = ""
     private var plateImage: Int = 0
+    private var pizzaImageMargin: Int = 0
 
     init {
         _mBinding = TwistedPizzaToppingsViewBinding.inflate(inflater, this, true)
@@ -54,7 +55,8 @@ class TwistedPizzaToppingsView(context: Context, attrs: AttributeSet) :
         animationDuration =
             typedArray.getInt(R.styleable.TwistedPizzaToppingsView_animationDuration, 800).toLong()
 
-        toppingQuantity = typedArray.getInt(R.styleable.TwistedPizzaToppingsView_toppingQuantity, 12)
+        toppingQuantity =
+            typedArray.getInt(R.styleable.TwistedPizzaToppingsView_toppingQuantity, 12)
 
         pizzaAnimation =
             typedArray.getBoolean(R.styleable.TwistedPizzaToppingsView_pizzaAnimation, true)
@@ -74,6 +76,12 @@ class TwistedPizzaToppingsView(context: Context, attrs: AttributeSet) :
                 R.drawable.plate
             )
 
+        pizzaImageMargin = typedArray.getDimension(
+            R.styleable.TwistedPizzaToppingsView_pizzaImageMargin,
+            resources.getDimension(com.intuit.sdp.R.dimen._20sdp)
+        ).toInt()
+
+
         initPizzaLayoutListener()
         setPizzaImage(pizzaImage)
         setPizzaSize(pizzaCustomizedSize)
@@ -88,6 +96,16 @@ class TwistedPizzaToppingsView(context: Context, attrs: AttributeSet) :
     private fun initPizzaLayoutListener() {
         with(mBinding)
         {
+            (ivPizza.layoutParams as LayoutParams).apply {
+                this.setMargins(
+                    pizzaImageMargin,
+                    pizzaImageMargin,
+                    pizzaImageMargin,
+                    pizzaImageMargin
+                )
+                ivPizza.layoutParams = this
+            }
+
             ivPizza.viewTreeObserver.addOnGlobalLayoutListener(object :
                 ViewTreeObserver.OnGlobalLayoutListener {
                 override fun onGlobalLayout() {

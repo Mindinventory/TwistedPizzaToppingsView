@@ -26,6 +26,7 @@
         app:pizzaAnimation="true"
         app:pizzaImage="@drawable/pizza5"
         app:pizzaSize="large"
+        app:pizzaImageMargin="@dimen/_20sdp"
         app:plateImage="@drawable/plate"
         app:toppingQuantity="12"
         app:toppingViewSize="@dimen/_15sdp" />

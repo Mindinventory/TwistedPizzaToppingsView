@@ -99,7 +99,8 @@ fun setAnimationDuration(@IntRange(from = 1, to = 1000) value: Long)
 | **pizzaImage**               | int or Uri                 | Set pizza image                                    | ic_pizza.png |
 | **plateImage**               | int or Uri                 | Set pizza plate image                              | plate.png    |
 | **toppingQuantity**          | int                        | Customize adding topping quantity (maximum 12)     | 12           |
-| **toppingViewSize**          | int                        | Customize topping view size                        | _15sdp       |
+| **toppingViewSize**          | int                        | Customize topping view size                        | _15dp        |
+| **pizzaImageMargin**         | int                        | Set pizza image margin                             | _20dp        |
 
 
 ## Guideline for contributors
